@@ -50,7 +50,7 @@ CEC::ICECAdapter *LibCecInitialise(CEC::libcec_configuration *configuration, con
 {
   if (!g_libCEC)
 #if defined(_WIN64)
-    g_libCEC = LoadLibrary(strLib ? strLib : "libcec.x64.dll");
+    g_libCEC = LoadLibrary(strLib ? strLib : "libcec.dll");
 #else
     g_libCEC = LoadLibrary(strLib ? strLib : "libcec.dll");
 #endif

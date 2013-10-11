@@ -37,6 +37,9 @@
     <Filter Include="adapter\Pulse-Eight">
       <UniqueIdentifier>{a5e91a49-0595-49bd-9bdb-d729d63f024e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="adapter\TCPCEC">
+      <UniqueIdentifier>{a3b3cb9e-6b77-44f3-b05d-11c97add14d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\lib\CECProcessor.h" />
@@ -186,6 +189,12 @@
       <Filter>adapter</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\src\lib\implementations\AQCommandHandler.h">
+      <Filter>implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\lib\adapter\TCPCEC\TCPCECAdapterCommunication.h">
+      <Filter>adapter\TCPCEC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\lib\CECProcessor.cpp" />
@@ -273,6 +282,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\lib\adapter\AdapterFactory.cpp">
       <Filter>adapter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\lib\adapter\TCPCEC\TCPCECAdapterCommunication.cpp">
+      <Filter>adapter\TCPCEC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
