@@ -52,6 +52,11 @@
 #include "TDA995x/TDA995xCECAdapterCommunication.h"
 #endif
 
+#if defined(HAVE_TCPCEC)
+//#include "TCPCEC/TCPCECAdapterDetection.h"
+#include "TCPCEC/TCPCECAdapterCommunication.h"
+#endif
+
 using namespace std;
 using namespace CEC;
 
@@ -126,6 +131,11 @@ IAdapterCommunication *CAdapterFactory::GetInstance(const char *strPort, uint16_
 #if defined(HAVE_RPI_API)
   if (!strcmp(strPort, CEC_RPI_VIRTUAL_COM))
     return new CRPiCECAdapterCommunication(m_lib->m_cec);
+#endif
+
+#if defined(HAVE_TCPCEC)
+  if (!strncmp(strPort, CEC_TCP_PROTOCOL, strlen(CEC_TCP_PROTOCOL)))
+	  return new CTCPCECAdapterCommunication(m_lib->m_cec,strPort);
 #endif
 
 #if defined(HAVE_P8_USB)
