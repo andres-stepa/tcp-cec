@@ -40,7 +40,6 @@
 #include "lib/LibCEC.h"
 #include "lib/platform/util/StdString.h"
 
-//#include "TCPCECAdapterMessageQueue.h"
 
 using namespace CEC;
 using namespace PLATFORM;
