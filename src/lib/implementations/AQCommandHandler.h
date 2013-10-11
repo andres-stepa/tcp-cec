@@ -32,7 +32,7 @@
  */
 
 #include "CECCommandHandler.h"
-#include "../platform/threads/threads.h"
+#include "platform/threads/threads.h"
 
 namespace CEC
 {

@@ -30,7 +30,6 @@
     <ClInclude Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterDetection.h" />
     <ClInclude Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterMessage.h" />
     <ClInclude Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterMessageQueue.h" />
-    <ClInclude Include="..\..\src\lib\adapter\TCPCEC\TCPCECAdapterCommunication.h" />
     <ClInclude Include="..\..\src\lib\CECClient.h" />
     <ClInclude Include="..\..\src\lib\CECInputBuffer.h" />
     <ClInclude Include="..\..\src\lib\CECProcessor.h" />
@@ -81,7 +80,6 @@
     <ClCompile Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterDetection.cpp" />
     <ClCompile Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterMessage.cpp" />
     <ClCompile Include="..\..\src\lib\adapter\Pulse-Eight\USBCECAdapterMessageQueue.cpp" />
-    <ClCompile Include="..\..\src\lib\adapter\TCPCEC\TCPCECAdapterCommunication.cpp" />
     <ClCompile Include="..\..\src\lib\CECClient.cpp" />
     <ClCompile Include="..\..\src\lib\CECProcessor.cpp" />
     <ClCompile Include="..\..\src\lib\devices\CECAudioSystem.cpp" />
@@ -122,21 +120,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -206,7 +208,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>CEC_DEBUGGING;HAVE_TCPCEC;HAVE_P8_USB;_WIN64;_DEBUG;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;__STDC_CONSTANT_MACROS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CEC_DEBUGGING;HAVE_P8_USB;_WIN64;_DEBUG;_CRT_SECURE_NO_WARNINGS;_WINSOCKAPI_;__STDC_CONSTANT_MACROS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)..\include;$(SolutionDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>
       </DisableSpecificWarnings>
